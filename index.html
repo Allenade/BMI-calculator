@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bmi calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- preloader section -->
+  <div class="loader">
+    <div class="loader-progress">0%</div>
+  </div>
+  <!-- preloader section ends -->
+  <header>
+    <div class="header-background"></div>
+    <div class="header-titile-container">
+      <div class="title-content">
+        <img src="image/logo.svg" alt="logo" />
+        <div class="title-inner">
+          <h1>Body Mass</h1>
+          <h1>Index Calculator</h1>
+          <p>
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting
+            point to evaluate your overall health and well-being.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="input-container">
+        <h2>Enter your details below</h2>
+        <div class="toggle">
+          <div class="metric-imperial ">
+            <label>
+              <input type="radio" name="unit" value="metric" />
+              Metric
+            </label>
+            <label>
+              <input type="radio" name="unit" value="imperial" />
+              Imperial
+            </label>
+          </div>
+
+
+          <div class="metric-section hide">
+            <!-- <h2>Metric</h2> -->
+            <div class="metric-display">
+              <label for="height">
+                <span>Height</span>
+                <div class="input-group">
+                  <input type="number" name="height" id="height" />
+
+                  <label class="unit" for="height">cm</label>
+                  <!-- <div class="cm-or-inch" id="cm-or-inch"></div> -->
+                  <span id="height_error"></span>
+
+
+                </div>
+              </label>
+              <label for="weight">
+                <span>Weight</span>
+                <div class="input-group">
+                  <input type="number" name="weight" id="weight" />
+
+                  <label class="unit" for="weight">Kg</label>
+                  <!-- <div class="kg-or-pound" id="kg-or-pound"></div> -->
+                  <span id="weight_error"></span>
+
+
+                </div>
+              </label>
+            </div>
+            <div class="calculator-container">
+              <div id="calculateBMI">
+                <div class="welcome-text hide">
+                  <h3 id="welcome">Welcome!</h3>
+                  <p id="enter-wh-parag">Enter your height and weight and you'll see your BMI result here</p>
+                </div>
+
+
+                <div class="result"></div>
+              </div>
+            </div>
+
+          </div>
+          <!-- ............................................... -->
+          <div class="imperial-section hidden">
+            <!-- <h2>Imperial</h2> -->
+            <div class="imperial-display">
+              <label for="height">
+                <span>height</span>
+                <div class="input-group">
+
+                  <input type="number" name="height" id="height-ft" />
+
+                  <!-- <span id="height_error"></span> -->
+                  <label class="unit" for="height">ft</label>
+                  <span class="height_error"></span>
+
+                  <!-- .......................................... -->
+
+                </div>
+              </label>
+              <label for="height">
+                <div class="input-group">
+                  <input type="number" name="height" id="height-in" class="height-in" />
+                  <!-- <span id="height_error"></span> -->
+
+                  <label class="unit" for="height">IN</label>
+                  <span class="height_error"></span>
+                </div>
+              </label>
+            </div>
+            <div class="imperial-display">
+              <label for="weight">
+                <span>weight</span>
+                <div class="input-group">
+                  <input type="number" name="weight" id="weight-st" />
+                  <label class="unit unit2" for="height">st</label>
+                  <span class="height_error"></span>
+                </div>
+              </label>
+              <label for="weight">
+                <div class="input-group">
+                  <input type="number" name="weight" id="weight-lbs" class="weight-lbs" />
+                  <label class="unit unit2" for="height">lbs</label>
+                  <span class="height_error"></span>
+                </div>
+              </label>
+            </div>
+            <div class="calculator-containers">
+              <div id="imperialcalculateBMI">
+                <div class="imperial-text">
+                  <h3 id="welcome">Welcome!</h3>
+                  <p id="enter-wh-parag">Enter your height and weight and you'll see your BMI result here</p>
+                </div>
+                <div class="imperialresult"></div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+  </header>
+  <!-- main section -->
+  <main>
+    <!-- middle-section -->
+    <div class="middle-section">
+      <div class="img-section">
+        <img src="image/image-man-eating.webp" alt="">
+      </div>
+      <div class="middle-section-text">
+        <h1>What your BMI result means</h1>
+        <p>A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a
+          healthy weight may lower your chances of experiencing health issues later on,
+          such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced
+          fat and sugar content, incorporating ample fruits and vegetables. Additionally,
+          strive for regular physical activity, ideally about 30 minutes daily for
+          five days a week.
+        </p>
+      </div>
+
+
+    </div>
+    <!-- middle-section ends -->
+
+
+    <!-- icon section -->
+ <div class="icon-background">
+     <div class="icon-section">
+      <!-- ............................................................. -->
+      <div class="healthy-eating">
+        <img src="image/icon-eating.svg" alt="icon-eating">
+        <div class="healthy-eating-text">
+
+          <h3>Regular exercise</h3>
+          <p>Exercise improves fitness, aids weight control, elevates mood, and reduces disease
+            risk, fostering wellness and longevity.</p>
+        </div>
+      </div>
+      <!-- ......................................................... -->
+      <div class="exercise">
+        <img src="image/icon-exercise.svg" alt="icon-exercise">
+        <div class="exercise-text">
+          <h3>Regular exercise</h1>
+            <p>Exercise improves fitness, aids weight control, elevates mood, and reduces disease
+              risk, fostering wellness and longevity.</p>
+        </div>
+      </div>
+<!-- .................................................................................... -->
+<div class="adequate-sleep">
+  <img src="image/icon-sleep.svg" alt="icon-sleep">
+  <div class="adequate-sleep-text">
+     <h3>Adequate sleep</h1>
+        <p>Sleep enhances mental clarity, emotional stability, and physical wellness, promoting
+          overall restoration and rejuvenation.</p>
+  </div>
+</div>
+ </div>
+    <!-- ..................................................................................... -->
+
+<div class="last-section">
+  
+</div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
