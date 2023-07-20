@@ -21,7 +21,7 @@ p {
 }
 
 /* preloader section */
-/* .loader {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -41,7 +41,7 @@ p {
   animation: fadeOut 1s ease forwards;
   opacity: 1;
   transition: opacity 5s;
-} */
+}
 @keyframes fadOut {
   from {
     opacity: 0;
